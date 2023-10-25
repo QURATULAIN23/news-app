@@ -36,7 +36,7 @@ class _NewsDetailsScreenState extends State<NewsDetailsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // final width = MediaQuery.sizeOf(context).width * 1;
+     final width = MediaQuery.sizeOf(context).width * 1;
     final height = MediaQuery.sizeOf(context).height * 1;
     DateTime dateTime = DateTime.parse(widget.newsDate);
     return Scaffold(
@@ -51,7 +51,7 @@ class _NewsDetailsScreenState extends State<NewsDetailsScreen> {
             height: height * .45,
             child: ClipRRect(
               borderRadius: const BorderRadius.only(
-                  topLeft: Radius.circular(30), topRight: Radius.circular(40)),
+                  topLeft: Radius.circular(40), topRight: Radius.circular(60)),
               child: CachedNetworkImage(
                 imageUrl: widget.newImage,
                 fit: BoxFit.cover,
@@ -100,6 +100,12 @@ class _NewsDetailsScreenState extends State<NewsDetailsScreen> {
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
                     color: Colors.black87)),
+                SizedBox(height: height*0.02,),
+                // Text(widget.content,
+                //     style: GoogleFonts.poppins(
+                //     fontSize: 14,
+                //     fontWeight: FontWeight.w500,
+                //     color: Colors.black87)),
               ],
             ),
           )
